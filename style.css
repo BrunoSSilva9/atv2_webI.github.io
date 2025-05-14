@@ -331,3 +331,11 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (max-width: 500px) {
+  #rua,
+  #cidade {
+    width: 100%;
+    background-color: #e7e5e4;
+  }
+}
