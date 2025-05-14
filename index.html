@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário de Matrícula</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <main class="container">
+    <section class="formulario">
+      <form action="#" method="post">
+        <a href="#" class="btn-voltar">← Voltar</a>
+        <header>
+          <h2>Formulário de matrícula</h2>
+          <p>Preencha os dados abaixo para matricular seu filho na escola Estrelas do Amanhã.</p>
+        </header>
+
+        <section>
+          <h3>Informações da criança</h3>
+
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Maria Luiza Alves" required />
+
+          <label for="data-nascimento">Data de nascimento</label>
+          <input type="date" id="data-nascimento" name="data-nascimento" value="2019-05-06" required />
+
+          <label for="sexo">Sexo</label>
+          <select id="sexo" name="sexo" required>
+            <option value="feminino" selected>Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="outro">Outro</option>
+          </select>
+
+          <label for="info-medicas">Informações médicas</label>
+          <textarea id="info-medicas" name="info-medicas" rows="5" placeholder="Ex: Alergia a glúten" required></textarea>
+
+          <label for="certidao" class="file-label">
+            <img src="img/cloud-upload.png" alt="Upload" />
+            Clique aqui para selecionar arquivos
+            <input type="file" id="certidao" name="certidao" required hidden />
+          </label>
+        </section>
+
+        <section>
+          <h3>Endereço residencial</h3>
+
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" name="cep" placeholder="01234-567" required />
+
+          <div class="grid">
+            <div>
+              <label for="rua">Rua</label>
+              <input type="text" id="rua" name="rua" placeholder="Rua das Flores" required />
+            </div>
+            <div>
+              <label for="numero">Número</label>
+              <input type="number" id="numero" name="numero" placeholder="123" required />
+            </div>
+          </div>
+
+          <div class="grid">
+            <div>
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" placeholder="São Paulo" required />
+            </div>
+            <div>
+              <label for="estado">Estado</label>
+              <input type="text" id="estado" name="estado" placeholder="SP" required />
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Informações do responsável</h3>
+
+          <label for="responsavel">Nome do responsável</label>
+          <input type="text" id="responsavel" name="responsavel" placeholder="Miguel Roberto Alves" required />
+
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(10) 98765-4321" required />
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="papailegal123@gmail.com" required />
+          <span class="error-message">
+            <img src="img/alert-circle.png" alt="Alerta" /> Insira um e-mail válido
+          </span>
+        </section>
+
+        <section>
+          <h3>Opções de matrícula</h3>
+
+          <label>Selecione o turno de estudo:</label>
+          <div class="radio-grid">
+            <label>
+              <input type="radio" name="turno" value="manha" checked />
+              <div class="turno manha">
+                <img src="img/sun-cloud-02.png" alt="Manhã" />
+                <span>Manhã</span>
+              </div>
+            </label>
+
+            <label>
+              <input type="radio" name="turno" value="tarde" />
+              <div class="turno">
+                <img src="img/sun-02.png" alt="Tarde" />
+                <span>Tarde</span>
+              </div>
+            </label>
+          </div>
+
+          <label>Em qual esporte voce gostaria de se inscrever seu filho?</label>
+          <div class="radio-grid">
+            <label>
+              <input type="radio" name="esporte" value="futebol" />
+              <div class="radio-option">
+                <img src="img/football.png" alt="Futebol" />
+                <span>Futebol</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="esporte" value="basquete" />
+              <div class="radio-option">
+                <img src="img/basketball-02.png" alt="Basquete" />
+                <span>Basquete</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="esporte" value="natacao" />
+              <div class="radio-option natacao">
+                <img src="img/swimming.png" alt="Natação" />
+                <span>Natação</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="esporte" value="yoga" />
+              <div class="radio-option">
+                <img src="img/yoga-02.png" alt="Yoga" />
+                <span>Yoga</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="esporte" value="volei" />
+              <div class="radio-option">
+                <img src="img/volleyball.png" alt="Vôlei" />
+                <span>Vôlei</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="esporte" value="boxe" />
+              <div class="radio-option">
+                <img src="img/boxing-glove-01.png" alt="Boxe" />
+                <span>Boxe</span>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <div class="checkbox">
+          <input type="checkbox" id="termos" required />
+          <label for="termos">
+            Declaro que li e concordo com os <span class="destaque">Termos e Condições</span> e com a
+            <span class="destaque">Política de Privacidade</span>.
+          </label>
+        </div>
+
+        <footer class="botoes">
+          <button type="reset" class="btn-secundario">Salvar respostas</button>
+          <button type="submit" class="btn-principal">Fazer matrícula</button>
+        </footer>
+      </form>
+    </section>
+
+    <section class="convite">
+      <header class="logo-box">
+        <img src="img/Frame 48095957.png" alt="Logo Estrelas do Amanhã" />
+        <span>Estrelas do Amanhã</span>
+      </header>
+      <h1>Porque cada momento de <span class="destaque">aprendizado</span> conta</h1>
+      <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
+      <img src="img/Illustration.png" alt="Ilustração de crianças" class="img-ilustracao" />
+    </section>
+  </main>
+</body>
+
+</html>
